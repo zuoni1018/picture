@@ -536,10 +536,10 @@ public class PictureImageGridAdapter extends RecyclerView.Adapter<RecyclerView.V
                 if (PictureMimeType.isContent(image.getPath())) {
                     if (PictureMimeType.isHasVideo(image.getMimeType())) {
                         Log.d("处理--->","4.4");
-                        int[] size = MediaUtils.getVideoSizeForUri(context, Uri.parse(image.getPath()));
+//                        int[] size = MediaUtils.getVideoSizeForUri(context, Uri.parse(image.getPath()));
                         Log.d("处理--->","4.4.1");
-                        width = size[0];
-                        height = size[1];
+                        width =20;
+                        height = 20;
                     } else if (PictureMimeType.isHasImage(image.getMimeType())) {
                         Log.d("处理--->","4.5");
                         int[] size = MediaUtils.getImageSizeForUri(context, Uri.parse(image.getPath()));
@@ -549,9 +549,11 @@ public class PictureImageGridAdapter extends RecyclerView.Adapter<RecyclerView.V
                 } else {
                     if (PictureMimeType.isHasVideo(image.getMimeType())) {
                         Log.d("处理--->","4.6");
-                        int[] size = MediaUtils.getVideoSizeForUrl(image.getPath());
-                        width = size[0];
-                        height = size[1];
+//                        int[] size = MediaUtils.getVideoSizeForUrl(image.getPath());
+//                        width = size[0];
+//                        height = size[1];
+                        width =20;
+                        height = 20;
                     } else if (PictureMimeType.isHasImage(image.getMimeType())) {
                         int[] size = MediaUtils.getImageSizeForUrl(image.getPath());
                         width = size[0];
